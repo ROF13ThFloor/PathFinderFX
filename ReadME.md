@@ -1,41 +1,46 @@
-## توضیحات پروژه مرکز آتش نشانی 
+# **Street Path Finder**
 
-در این پروژه ورودی های ما شامل شماره نزدیک ترین تقاطع به مرکز آتش است که باید آتش نشانان خود را به آن برسانند 
+## **Overview**
 
-که در صفحه اول ورودی پس از اجرا شدن برنامه از کاربر درخواست میشود .
+The **Street Path Finder** is a JavaFX-based application designed to visualize and analyze paths between street corners. Users can input street corner connections, visualize potential paths, and analyze connectivity using depth-first search (DFS) algorithms. The project provides an interactive graphical user interface for ease of use.
 
+## Features 
 
+- **Java** – Core programming language.
+- **JavaFX** – For building the graphical user interface.
+- **Algorithms** – DFS for pathfinding and connectivity analysis.
 
-![1](1.png)
+### **Prerequisites**
 
+Ensure you have the following installed on your system:
 
+- Java Development Kit (JDK 8 or higher)
+- JavaFX libraries (included in JDK 11+)
+- An IDE that supports JavaFX (e.g., IntelliJ IDEA, Eclipse)
 
-پس از وارد کردن شماره تقاطع که شامل یکی از اعداد 1 تا 21 میباشد (چون 21 منطقه آتش نشانی داریم ) 
+## **Usage**
 
-حالا باید ورودی های بعدی را بدهیم 
+1. **Starting the Application:**
+   - Run the application, and a window will appear with a text input and "Start" button.
 
-این ورودی ها عدد های صحیح دو تایی هستند که تا هنگامی که شما از کاربر درخواست نتیجه را نکنید تکرار میشود 
+![](images/1.png)
 
-ورودی ها شامل دو تا عدد صحیح هستند که برای مثال اگر اعداد 2 و 4 قرار داده شوند بدین معناست که بین این دو تقاطع مانعی وجود ندارد ینی مسیری مستقیم بدون وجود هیچ تقاطع دیگری بین این دو مسیر وجود دارد 
+1. **Input Street Connections:**
+   - Enter the number of street corners in the text field and click "Start."
+   - Input connections between street corners by specifying values in the text fields and clicking "Add Data."
+2. **Viewing Paths:**
+   - Click the "Show Paths" button to visualize available paths between street corners.
 
-اجرای الگوریتم ! : 
+## **Project Structure**
 
-در این برنامه ما از روش عقبگرد و یا همان back tracking  برای پیاده سازی برنامه استفاده کردیم 
+```bash
+src/
+│-- sample/
+│   ├── Main.java          # Main entry point for the JavaFX application
+│   ├── Controller.java    # Placeholder controller for UI interaction
+│   ├── sample.fxml        # JavaFX UI layout definition
+```
 
-روش کار بدین صورت است که شماره های تقاطع های باز در آرایه matrix  که آرایه ای از نو Boolean  است 
+## **License**
 
-با هر بار ورودی دو عدد دو خانه آن به معنای آن که بین این دو خالی است و مانعی وجود ندارد ذخیر میشود
-
-در تابع dfs درخت پوشای بهینه ما به وسیله آرایه vanvisit  به دست میآید که یک تابع بازگشتی است 
-
- 
-
-تابع دیگری که در این برنامه کاربرده شده است تابع generatpath  است که بدین صورت مسیرهای موجود از راس 1 که همیشه راس مرکز آتش نشانی است را به شماره راس مرکز آتش نشان میدهد 
-
-روش کار بدین صورت است که در درخت پوشای بهینه که تابع dfs  خروجی آرایه canvisit  را داشته است و در این آرایه شروع به حرکت در درخت میکنیم و مسیر های مورد نظر و توانا را به دست می آوریم 
-
-سپس با استفاده از ui مورد نظر خروجی برنامه را چاپ میکنیم.
-
-
-
- ![2](2.png)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
