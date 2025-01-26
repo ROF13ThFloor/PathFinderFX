@@ -10,7 +10,7 @@ The **Street Path Finder** is a JavaFX-based application designed to visualize a
 - **JavaFX** – For building the graphical user interface.
 - **Algorithms** – DFS for pathfinding and connectivity analysis.
 
-### **Prerequisites**
+## Prerequisites
 
 Ensure you have the following installed on your system:
 
